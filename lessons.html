@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Cosmic--App--interfase</title>
+		
+		<link rel="shortcut icon" href="img/favicon.png" type="image/png" />
+
+		<link rel="stylesheet" href="css/libs.min.css">
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+	<body>
+	<div class="wrapper">
+		<div class="main">
+			<div class="menu" id="menu">
+				<div class="toolset_menu">
+					<a href="index.html" class="home" id="home-link"><i class="fa fa-home fa-2x"></i></a>
+					<span id="warn"></span>
+					<a href="#" class="log-out" id="log-out"><i class="fa fa-sign-out fa-2x"></i></a>
+					<a href="userinfo.html" class="info-link" id="info-link"><i class="fa fa-address-card-o fa-2x" aria-hidden="true"></i></a>
+					<span id="log-out-warn">Выход</span>
+					<div class="ch_speed">
+						<form action="">
+							<input type="text" id="speed_val" value="" placeholder="Введите скорость">
+							<a href="#" class="read" id="read"><i class="fa fa-play-circle-o fa-2x"></i></a>
+						</form>
+					</div>
+				</div>
+				<div class="userInfo">
+					<span id="store_name"></span><div id="title_read">Читалка</div>
+				</div>
+			</div>
+			<ul class="less_list" id="less-list">
+				<li><a href="#" name="1">1</a></li>
+				<li><a href="#" name="2">2</a></li>
+				<li><a href="#" name="3">3</a></li>
+				<li><a href="#" name="4">4</a></li>
+				<li><a href="#" name="5">5</a></li>
+				<li><a href="#" name="6">6</a></li>
+				<li><a href="#" name="7">7</a></li>
+				<li><a href="#" name="8">8</a></li>
+				<li><a href="#" name="9">9</a></li>
+				<li><a href="#" name="10">10</a></li>
+				<li><a href="#" name="11">11</a></li>
+				<li><a href="#" name="12">12</a></li>
+				<li><a href="#" name="13">13</a></li>
+				<li><a href="#" name="14">14</a></li>
+			</ul>
+			<h2 id="title_less">Введение</h2>
+			<div id="lesson_container"></div>
+			<button id="up" type="button"><i class="fa fa-rocket fa-2x" aria-hidden="true"></i></button>
+		</div>
+	</div>
+<div id="footer"><!--Подвал--></div>
+		<!--Скрипты-->
+		<script src="services/requestService.js"></script>
+		<script src="js/page_settings/session_guard.js"></script>
+		<script src="js/custom/lesson_labels.js"></script>
+		<script src="js/custom/lesson_template.js"></script>
+		<script src="js/libs.min.js"></script>
+		<script src="js/common.js"></script>
+		<script src="js/page_settings/page_navi.js"></script>
+		<script src="js/page_settings/on_offline.js"></script>
+		<script src="js/modules/reader.js"></script>
+	</body>
+</html>

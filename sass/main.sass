@@ -1,0 +1,338 @@
+@mixin transition($direct, $time)
+	-webkit-transition: $direct, $time;
+	-moz-transition: $direct, $time;
+	-ms-transition: $direct, $time;
+	-o-transition: $direct, $time;
+	transition: $direct, $time;
+
+//==========================================================
+html, body
+	margin: 0
+	width: 100%
+	height: 100%
+	font-family: sans-serif
+
+body
+	background: #3aa3e5
+	font-family: monospace
+	font-weight: normal
+
+	.main
+		width: 100%
+		float: left
+		height: 100%
+		border-bottom: 2px solid white
+
+//==========================================================
+//----------------------------------------------> Анимация луны
+@-webkit-keyframes spin
+	from
+		-webkit-transform: rotate(0deg)
+		-ms-transform: rotate(0deg)
+		transform: rotate(0deg)
+
+	to
+		-webkit-transform: rotate(360deg)
+		-ms-transform: rotate(360deg)
+		transform: rotate(360deg)
+
+@keyframes spin 
+	from
+		-webkit-transform: rotate(0deg)
+		-ms-transform: rotate(0deg)
+		transform: rotate(0deg)
+
+	to
+		-webkit-transform: rotate(360deg)
+		-ms-transform: rotate(360deg)
+		transform: rotate(360deg)
+
+//------------------------------------------------
+@-webkit-keyframes shadow_up
+	from
+		border: 1px solid #2c65b7
+	to
+		border: 5px solid #2c65b7
+
+@keyframes shadow_up
+	from
+		border: 1px solid #2c65b7
+	to
+		border: 5px solid #2c65b7
+//============================================
+//------------------------------------------->
+
+#clock
+	width: 350px
+	padding: 10px
+	margin: 0 auto
+	margin-top: 30px
+	border-radius: 30px
+	border: 2px solid white
+	text-align: center
+	background: #2c65b7
+
+	img
+		max-height: 40px;
+
+#connect
+	width: 80px
+	height: 80px
+	padding: 24px 10px 10px 10px
+	margin: 0 auto
+	margin-top: 100px
+	border-radius: 50%
+	border: 2px solid white
+	text-align: center
+	text-shadow: 1px 1px 2px white
+
+#moon_orbit
+	position: absolute
+	left: 50%
+	top: 50%
+	margin-left: -215px
+	margin-top: -215px
+	height: 430px
+	width: 430px
+	border-radius: 50%
+	-webkit-animation: spin 15s infinite linear
+	animation: spin 15s infinite linear
+
+	img
+		max-width: 75px
+
+.column
+	width: 400px
+	background-image: url(../img/planeta-zemlya.jpg)
+	height: 400px
+	text-align: center
+	color: wheat
+	border-radius: 50%
+	margin-top: 120px
+	z-index: 10000
+	position: absolute
+	left: 50%
+	top: 50%
+	margin-left: -200px
+	margin-top: -200px
+	
+//============================================
+//----------------------------------->
+
+.numbers
+	font-size: 70px
+
+	img
+		max-height: 70px
+
+#time_val
+	width: 90%
+	height: 80px
+	padding: 10px
+	font-size: 70px
+	box-sizing: border-box
+
+#slider
+	display: inline-block
+	float: left
+
+	img
+		margin-bottom: 20px
+		margin-top: 20px
+//------------------------------------>
+#clear-timer
+	width: 90%
+	margin: 0 auto
+	margin-bottom: 20px
+
+.menu-links a
+	width: 90%
+	margin-top: 10px
+
+.menu-links #log-out
+	margin-top: 10px
+	margin-bottom: 20px
+	width: 90%
+	margin-top: 40px
+
+#left
+	height: 60px
+	width: 60px
+	float: left
+	border-radius: 50%
+	margin-right: 5px
+	margin-top: 120px
+
+#right
+	height: 60px
+	width: 60px
+	float: right
+	border-radius: 50%
+	margin-left: 5px
+	margin-top: 120px
+
+.box
+	width: 170px
+	border: 1px solid white
+	height: 50px
+	border-radius: 12px
+	margin-top: 10px
+
+	:hover
+		width: 170px
+
+.less_list
+	max-width: 80%
+	margin: 0 auto
+	margin-top: 100px
+	list-style: none
+	text-align: justify
+	
+	&:after
+		content: ""
+		display: inline-block
+		width: 100%
+		height: 0
+	
+
+	li
+		display: inline-block
+		border-radius: 50%
+		border: 2px solid white
+		box-shadow: 1px 1px 5px blue;
+		width: 50px
+		height: 50px
+		text-align: center
+		@include transition(all, .5s)
+
+		&:hover
+			border: 2px solid #2c65b7
+		
+		&:active
+			box-shadow: 1px 1px 10px aqua;
+	
+		a
+			display: block
+			padding-top: 10px;
+			height: 100%
+			color: white
+			text-decoration: none
+			@include transition(all, .5s)
+
+			&:hover
+				color: #2c65b7
+
+#title_less
+	text-align: center
+	min-height: 35px;
+	color: white
+
+#up
+	position: fixed
+	right: 30px
+	width: 70px
+	height: 70px
+	bottom: 20px
+	background: transparent
+	border-radius: 50%
+	color: white
+	border: 1px solid white
+	-webkit-transform: rotate(-45deg)
+	-ms-transform: rotate(-45deg)
+	transform: rotate(-45deg)
+	@include transition(all, 1s)
+
+#up:hover
+	border: 5px solid #2c65b7
+	color: #2c65b7
+	-webkit-animation: shadow_up .8s infinite linear
+	animation: shadow_up .8s infinite linear
+
+#up:focus
+	outline: none
+
+#settings
+	top: 100px
+	position: fixed
+	left: 20px
+	height: 60px
+	width: 60px
+	padding-top: 2px;
+	border-radius: 50%
+	background: transparent
+	border: 1px solid white
+	color: white
+
+#settings:hover
+	color: #2c65b7
+	-webkit-animation: spin 2s infinite linear
+	animation: spin 2s infinite linear
+	border: 1px solid #2c65b7
+
+#settings:focus
+	outline: none
+
+#settings_list
+	position: fixed
+	height: 90px
+	width: 160px
+	background: #3aa3e5
+	top: 170px
+	padding: 0
+	border: 1px solid white
+	border-radius: 20px
+	left: 50px
+	list-style: none
+	padding-left: 15px;
+	padding-top: 5px;
+	display: none
+
+	a
+		color: white
+
+#color_list
+	position: fixed
+	height: 104px
+	width: 50px
+	top: 170px
+	left: 220px
+	border: 1px solid white
+	list-style: none
+	padding: 0
+	border-radius: 20px
+	display: none
+
+	button
+		border-radius: 50%
+		border: 1px solid white
+		background: transparent
+		margin-left: 9px;
+		height: 30px
+		width: 30px
+		padding: 0
+
+	#black
+		background: black
+		border: 2px solid white
+
+	#green
+		background: yellowgreen
+		border: 2px solid white
+
+	#def
+		background: #3aa3e5
+		border: 2px solid white
+
+@import "./app/components/header/header.sass";
+@import "./app/components/footer/footer.sass";
+
+@import "app/sass/userinfo.sass";
+@import "./app/sass/calc.sass";
+@import "./app/sass/registration.sass";
+@import "./app/sass/login.sass";
+@import "./app/sass/lessons.sass";
+@import "./app/sass/timer.sass";
+@import "./app/sass/seconder.sass";
+@import "./app/sass/slider.sass";
+
+

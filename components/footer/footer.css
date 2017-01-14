@@ -1,0 +1,25 @@
+#footer {
+  max-height: 200px;
+  height: 100%;
+  float: left;
+  width: 100%;
+  border-top: 1px solid white; }
+  #footer .copyright {
+    float: left;
+    padding: 20px;
+    font-family: times; }
+  #footer .contacts {
+    float: left;
+    padding-top: 20px; }
+    #footer .contacts a {
+      font-size: 30px;
+      color: #fff; }
+      #footer .contacts a:hover {
+        text-decoration: none;
+        opacity: 0.7; }
+  #footer .desc {
+    float: right;
+    font-size: 30px;
+    margin-right: 40px;
+    margin-top: 20px;
+    text-transform: uppercase; }

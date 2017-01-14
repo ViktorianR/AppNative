@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Cosmic--App--interfase</title>
+		
+		<link rel="shortcut icon" href="img/favicon.png" type="image/png" />
+
+		<link rel="stylesheet" href="css/libs.min.css">
+		<link rel="stylesheet" href="css/main.min.css">
+	</head>
+	<body>
+		<div class="main">
+			<div class="menu" id="menu">
+				<div class="toolset_menu">
+					<a href="#" class="calc" id="calc-link"><i class="fa fa-calculator fa-2x"></i></a>
+					<a href="#" class="timer" id="timer-link"><i class="fa fa-history fa-2x"></i></a>
+					<a href="#" class="seconder" id="seconder-link"><i class="fa fa-hourglass-end fa-2x"></i></a>
+					<a href="#" class="slider" id="slider-link"><i class="fa fa-picture-o fa-2x"></i></a>
+					<a href="#" class="info-dev" id="dev-link"><i class="fa fa-info-circle fa-2x"></i></a>
+					<a href="lessons.html" class="lessons" id="less-link"><i class="fa fa-book fa-2x"></i></a>
+					<a href="#" class="logs" id="log-link"><i class="fa fa-file-text-o fa-2x" aria-hidden="true"></i></a>
+					<span id="warn"></span>
+					<a href="#" class="log-out" id="log-out"><i class="fa fa-sign-out fa-2x"></i></a>
+					<a href="userinfo.html" class="info-link" id="info-link"><i class="fa fa-address-card-o fa-2x" aria-hidden="true"></i></a>
+					<span id="log-out-warn">Выход</span>
+				</div>
+				<div class="userInfo">
+					<span id="store_name"></span>
+				</div>
+			</div>
+			<div class="log_place">
+				<h3>Логи вычислений</h3>
+				<div id="log_box"></div>
+			</div>
+<button id="up" type="button"><i class="fa fa-rocket fa-2x" aria-hidden="true"></i></button>
+<div id="moon_orbit">
+	<img src="img/moon.png" alt="" />
+</div>
+<div class="column" id="column">
+	<div id="connect"><i class="fa fa-wifi fa-2x"></i></div>
+	<div id="clock"></div>
+</div>
+</div>	
+<div class="calc-box" id="calc_box">
+	<div class="content">
+		<div class="container">
+			<form action="" id="calc">
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 form-text">
+					<input type="text" disabled value="" name="saver" id="operation" />
+					<input type="text" disabled value="" name="summ" id="calculation" placeholder="Введите операцию"/>
+				</div>
+				<div class="row button-box" id="numbers_calc">
+					<button type="button" class="num" name="1" id="one" value="1">1</button>
+					<button type="button" class="num" name="2" id="two" value="2">2</button>
+					<button type="button" class="num" name="3" id="three" value="3">3</button>
+					<button type="button" class="num" name="4" id="four" value="4">4</button>
+					<button type="button" class="num" name="5" id="five" value="5">5</button>
+					<button type="button" class="num" name="6" id="six" value="6">6</button>
+					<button type="button" class="num" name="7" id="seven" value="7">7</button>
+					<button type="button" class="num" name="8" id="euth" value="8">8</button>
+					<button type="button" class="num" name="9" id="nine" value="9">9</button>
+					<button type="button" class="num" name="0" id="zero" value="0">0</button>
+				</div>
+				<div class="row operation-box" id="operators">
+					<button type="button" name="+" id="plus" value="+">+</button>
+					<button type="button" name="-" id="minus" value="-">-</button>
+					<button type="button" name="*" id="mult" value="*">*</button>
+					<button type="button" name="/" id="divis" value="/">/</button>
+					
+	<!--					-->
+					<button type="button" name="sq" id="sq" >&#8730;</button>
+					<button type="button" name="equal" id="equal">=</button>
+					<button type="button" name="c" id="c">C</button>
+				</div>
+			</form>				
+		</div>
+	</div>
+</div>
+<div class="timer_box">
+	<div class="container">
+		<div class="timer_inner">
+			<h3><i class="fa fa-history"></i> ТАЙМЕР</h3>
+
+			<input type="text" id="time_val" />
+
+			<div class="numbers" id="numbers">
+				<p>0</p>
+			</div>
+
+			<div class="tools">
+				<button type="button" class="btn btn-info" id="start"><i class="fa fa-play"></i></button>
+				<button type="button" class="btn btn-warning" id="stop"><i class="fa fa-stop"></i></button>
+				<button type="button" class="btn btn-danger" id="clear-timer"><i class="fa fa-reply"></i></button>
+			</div>
+		</div>
+	</div>	
+</div>
+<div class="seconder_box" id="seconder_box">
+	<div class="container">
+		<div class="seconder_inner">
+			<h3><i class="fa fa-hourglass-end"></i> СЕКУНДОМЕР</h3>
+
+			<div class="numbers" id="numbers">
+				<p>0</p>
+			</div>
+
+			<div class="tools">
+				<button type="button" class="btn btn-info" id="start"><i class="fa fa-play"></i></button>
+				<button type="button" class="btn btn-warning" id="stop"><i class="fa fa-stop"></i></button>
+				<button type="button" class="btn btn-danger" id="clear-timer"><i class="fa fa-reply"></i></button>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="slider_box" id="slider_box">
+	<div class="container">
+		<div class="slider_inner">
+			<h3><i class="fa fa-caret-square-o-right"></i> СЛАЙДЕР</h3>
+
+			<div class="numbers" id="numbers">
+				<button type="button" class="btn btn-warning" id="left"><i class="fa fa-caret-left"></i></button><div id="slider"><img src="img/1.jpg" alt=""></div><button type="button" class="btn btn-warning" id="right"><i class="fa fa-caret-right"></i></button>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="footer"><!--Подвал--></div>
+		<!--Скрипты-->
+		<script src="services/requestService.js"></script>
+		<script src="js/libs.min.js"></script>
+		<script src="js/page_settings/session_guard.js"></script>
+		<script src="js/common.js"></script>
+		<script src="js/page_settings/page_navi.js"></script>
+		<script src="js/page_settings/on_offline.js"></script>
+	</body>
+</html>

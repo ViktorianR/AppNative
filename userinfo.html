@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Cosmic--App--interfase</title>
+
+		<link rel="shortcut icon" href="img/favicon.png" type="image/png" />
+
+		<link rel="stylesheet" href="css/libs.min.css">
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="main">
+				<div class="menu" id="menu">
+					<div class="toolset_menu">
+						<a href="index.html" class="home" id="home-link"><i class="fa fa-home fa-2x"></i></a>
+						<span id="warn"></span>
+						<a href="userinfo.html" class="log-out" id="log-out"><i class="fa fa-sign-out fa-2x"></i></a>
+						<span id="log-out-warn">Выход</span>
+					</div>
+					<div class="userInfo">
+						<span id="store_name"></span>
+					</div>
+				</div>
+				<div class="info_form">
+					<table>
+						<tr>
+							<td class="well" colspan="2">Личная информация</td>
+						</tr>
+						<tr>
+							<td>Имя</td>
+							<td id="fullname"><input type="text" value="" placeholder="Ваше имя"></td>
+						</tr>
+						<tr>
+							<td>Фамилия</td>
+							<td id="second_name"><input type="text" value="" placeholder="Ваша фамилия"></td>
+						</tr>
+						<tr>
+							<td>Возраст</td>
+							<td id="age"><input type="text" value="" placeholder="Сколько вам лет?"></td>
+						</tr>
+						<tr>
+							<td class="saveinfo" colspan="2">
+								<button type="button" id="save-info" class="btn btn-primary">Сохранить</button>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div id="footer"><!--Подвал--></div>
+		<!--Скрипты-->
+		<script src="js/page_settings/session_guard.js"></script>
+		<script src="js/libs.min.js"></script>
+		<script src="js/page_settings/page_navi.js"></script>
+		<script src="js/page_settings/on_offline.js"></script>
+		<script src="js/user_settings/userinfo.js"></script>
+	</body>
+</html>
